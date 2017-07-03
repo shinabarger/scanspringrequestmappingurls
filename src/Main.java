@@ -16,6 +16,7 @@ public class Main {
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             superLongString.append(line + "\n");
+            System.out.println("Test");
             System.out.println(superLongString);
             lineNumber++;
         }
