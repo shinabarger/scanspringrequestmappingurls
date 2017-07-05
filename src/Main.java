@@ -19,18 +19,11 @@ public class Main {
             checkIfStringContainsSomethingAndPrintItOut(lineFromFile);
             lineNumber++;
         }
-
-        //TODO figure this out...
-        for (int i = 0; i < superLongString.length(); i++) {
-
-        }
-
-
     }
 
     private static void checkIfStringContainsSomethingAndPrintItOut(String lineFromFile) {
         //Change the word between the quotation marks of this method for whatever you're trying to find
-        if (lineFromFile.contains("@RequestMapping")){
+        if (lineFromFile.contains("@RequestMapping")) {
             System.out.println(lineFromFile);
         }
     }
