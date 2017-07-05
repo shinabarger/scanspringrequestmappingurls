@@ -14,10 +14,9 @@ public class Main {
         StringBuilder superLongString = new StringBuilder();
 
         while (scanner.hasNextLine()) {
-            String line = scanner.nextLine();
-            superLongString.append(line + "\n");
-            System.out.println("Test");
-            System.out.println(superLongString);
+            String lineFromFile = scanner.nextLine();
+            superLongString.append(lineFromFile + "\n");
+            checkIfStringContainsSomethingAndPrintItOut(lineFromFile);
             lineNumber++;
         }
 
@@ -27,5 +26,12 @@ public class Main {
         }
 
 
+    }
+
+    private static void checkIfStringContainsSomethingAndPrintItOut(String lineFromFile) {
+        //Change the word between the quotation marks of this method for whatever you're trying to find
+        if (lineFromFile.contains("@RequestMapping")){
+            System.out.println(lineFromFile);
+        }
     }
 }
