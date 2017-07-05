@@ -21,6 +21,14 @@ public class Main {
 
     }
 
+    private static void checkIfStringContainsOneThingAndPrintItOut(String lineFromFile) {
+        //Change the word between the quotation marks of this method for whatever you're trying to find
+        if (lineFromFile.contains("@RequestMapping")) {
+            System.out.println(lineFromFile);
+        }
+
+    }
+
     private static void addRequestMethodTypeCommentBelow(String lineFromFile) {
         if (lineFromFile.contains("POST")) {
             System.out.println("                              ↑ POST ↑ ");
@@ -31,14 +39,6 @@ public class Main {
         } else if (lineFromFile.contains("PUT")) {
             System.out.println("                              ↑ PUT ↑ ");
         }
-    }
-
-    private static void checkIfStringContainsOneThingAndPrintItOut(String lineFromFile) {
-        //Change the word between the quotation marks of this method for whatever you're trying to find
-        if (lineFromFile.contains("@RequestMapping")) {
-            System.out.println(lineFromFile);
-        }
-
     }
 
 }
