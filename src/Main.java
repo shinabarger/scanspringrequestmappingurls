@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
-        File text = new File("C:\\Traqtion2\\traqtion2\\src\\main\\java\\com\\nsf\\traqtion\\service\\rest\\SupplierFacilityRestController.java");
+        File text = new File("C:\\Traqtion2\\traqtion2\\src\\main\\java\\com\\nsf\\traqtion\\service\\rest\\ProductSpecificationController.java");
         Scanner scanner = new Scanner(text);
 
         int lineNumber = 0;
@@ -14,11 +14,12 @@ public class Main {
         while (scanner.hasNextLine()) {
             String lineFromFile = scanner.nextLine();
             superLongString.append(lineFromFile + "\n");
-            checkIfStringContainsOneThingAndPrintItOut(lineFromFile);
-            addRequestMethodTypeCommentBelow(lineFromFile);
+            //checkIfStringContainsOneThingAndPrintItOut(lineFromFile);
+            //addRequestMethodTypeCommentBelow(lineFromFile);
+            ifContainsPostPrintNextThreeLines(scanner, lineFromFile);
+
             lineNumber++;
         }
-
     }
 
     private static void checkIfStringContainsOneThingAndPrintItOut(String lineFromFile) {
@@ -26,7 +27,6 @@ public class Main {
         if (lineFromFile.contains("@RequestMapping")) {
             System.out.println(lineFromFile);
         }
-
     }
 
     private static void addRequestMethodTypeCommentBelow(String lineFromFile) {
@@ -41,4 +41,13 @@ public class Main {
         }
     }
 
+    private static void ifContainsPostPrintNextThreeLines(Scanner scanner, String lineFromFile) {
+        if(lineFromFile.contains("POST")) {
+            System.out.println(lineFromFile);
+            lineFromFile = scanner.nextLine();
+            System.out.println(lineFromFile);
+            lineFromFile = scanner.nextLine();
+            System.out.println(lineFromFile + "\n");
+        }
+    }
 }
