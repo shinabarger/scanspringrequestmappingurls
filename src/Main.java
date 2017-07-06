@@ -17,7 +17,6 @@ public class Main {
             //checkIfStringContainsOneThingAndPrintItOut(lineFromFile);
             //addRequestMethodTypeCommentBelow(lineFromFile);
             ifContainsPostPrintNextThreeLines(scanner, lineFromFile);
-
             lineNumber++;
         }
     }
@@ -42,7 +41,7 @@ public class Main {
     }
 
     private static void ifContainsPostPrintNextThreeLines(Scanner scanner, String lineFromFile) {
-        if(lineFromFile.contains("POST")) {
+        if (lineFromFile.contains("POST")) {
             System.out.println(lineFromFile);
             lineFromFile = scanner.nextLine();
             System.out.println(lineFromFile);
